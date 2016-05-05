@@ -2,8 +2,6 @@
 Leap Day for GitHub Pages
 by Matt Graham
 */
-@import url("default.css");
-
 @font-face {
   font-family: 'Quattrocento Sans';
   src: url("../fonts/quattrocentosans-bold-webfont.eot");
@@ -1060,8 +1058,8 @@ footer {
 
 
 a.headerlink { display:none; }
-ul > li.toctree-l1 { padding: 0; }
-ul > li.toctree-l2 { 
+nav ul li.toctree-l1 { padding: 0; }
+nav ul li.toctree-l2 { 
   padding: 0;
   font-size: 12px;
 }
@@ -1199,3 +1197,5 @@ table.docutils > tbody > tr.field > td.field-body strong {
 }
 
 code.py.py-exc { color: #E74C3C; }
+
+div.line-block { margin-bottom: 15px; }
