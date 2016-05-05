@@ -234,7 +234,7 @@ code,
 kbd,
 samp {
   font-family: monospace, 'courier new', serif;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 /*
@@ -603,7 +603,7 @@ blockquote p {
 
 code {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  font-size: 90%;
+  font-size: 80%;
   /*white-space: nowrap;*/
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
@@ -1065,6 +1065,12 @@ ul > li.toctree-l2 {
   padding: 0;
   font-size: 12px;
 }
+nav > ul > li.current > a,
+nav > ul > li.current > ul.current > li.current > a {
+  font-weight: bold;
+  color: #4276b6;
+  text-decoration: underline;
+}
 
 div.line-block > div.line {
   border-left: 3px solid #ffcc00;
@@ -1130,3 +1136,66 @@ td.code > div.highlight > pre {
   text-transform: uppercase;
   text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
 }
+
+dl.class > dt,
+dl.method > dt,
+dl.function > dt,
+dl.attribute > dt {
+  padding: 5px;
+  margin: 10px 0;
+}
+dl.class > dt {
+  background-color: #FFE788;
+  border-top: solid 5px #ffcc00;
+}
+dl.method > dt,
+dl.function > dt {
+  background-color: #e7f2fa;
+  border-top: solid 5px #6ab0de;
+}
+dl.attribute > dt {
+  background-color: #f0f0f0;
+  border-top: solid 5px #ccc;
+}
+dl.class > dt > em.property { color: #dba500; }
+dl.method > dt > em.property,
+dl.function > dt > em.property { color: #4276b6; }
+dl.attribute > dt > em.property { color: #888; }
+
+dl.class > dt > em,
+dl.method > dt > em,
+dl.function > dt > em {
+  color: #4276b6;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-size: 80%;
+}
+
+dl.class > dt > code + code,
+dl.method > dt > code + code,
+dl.function > dt > code + code { margin-left: -10px; }
+
+span.sig-paren {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-size: 80%;
+  font-style: italic;
+  /*white-space: nowrap;*/
+  color: #E74C3C;
+  /*text-shadow: 0px 1px 0px #000;*/
+  margin: 0px 1px 0px 2px;
+  padding: 2px 3px 3px 3px;
+  background: #eee;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+
+table.docutils > tbody > tr.field > td.field-body strong {
+  color: #4276b6;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-size: 90%;
+}
+
+code.py.py-exc { color: #E74C3C; }
