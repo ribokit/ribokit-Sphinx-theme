@@ -1170,7 +1170,20 @@ dl.function > dt > em {
 
 dl.class > dt > code + code,
 dl.method > dt > code + code,
-dl.function > dt > code + code { margin-left: -10px; }
+dl.function > dt > code + code { 
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+dl.class > dt > code,
+dl.method > dt > code,
+dl.function > dt > code {
+  background-color: transparent;
+  color: #000;
+  text-shadow: none;
+  font-size: 90%;
+  padding: 2px 0px 3px 0px;
+}
 
 span.sig-paren {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
@@ -1178,16 +1191,21 @@ span.sig-paren {
   font-style: italic;
   /*white-space: nowrap;*/
   color: #E74C3C;
-  /*text-shadow: 0px 1px 0px #000;*/
-  margin: 0px 1px 0px 2px;
+  text-shadow: none;
+  margin: 0;
   padding: 2px 3px 3px 3px;
-  background: #eee;
+  background: transparent;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -o-border-radius: 4px;
   -ms-border-radius: 4px;
   -khtml-border-radius: 4px;
   border-radius: 4px;
+}
+code.py.py-exc {
+  color: #fff;
+  background-color: #E74C3C;
+  text-shadow: 0px 1px 0px #000;
 }
 
 table.docutils > tbody > tr.field > td.field-body strong {
@@ -1196,6 +1214,9 @@ table.docutils > tbody > tr.field > td.field-body strong {
   font-size: 90%;
 }
 
-code.py.py-exc { color: #E74C3C; }
-
 div.line-block { margin-bottom: 15px; }
+div.wrapper h1 {
+  padding-bottom: 15px;
+  border-bottom: solid 3px #ffcc00;
+}
+
