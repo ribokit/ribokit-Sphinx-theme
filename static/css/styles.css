@@ -1098,4 +1098,20 @@ td.code > div.highlight > pre {
 .align-center{
   margin: auto;
   display: block;
+}
 
+.search-form{
+  position: fixed;
+  margin-left: -205px;
+  margin-top: 6px;
+  left: 50%;
+  padding: 0px 12px;
+}
+.search-box{
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid #dba500;
+  background-color: #FFE788;
+  color: #9d7f0d;
+  font-style: italic;
+}

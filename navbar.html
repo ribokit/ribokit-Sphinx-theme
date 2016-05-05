@@ -1,10 +1,11 @@
 <nav>
+    <ul>
+        <li class="tag-h1"><a href="index.html">{{ shorttitle }}</a></li>
+    </ul>
     {% block menu %}
-        {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
+        {% set toctree = toctree(maxdepth=2, collapse=theme_collapse_navigation, includehidden=False) %}
         {% if toctree %}
             {{ toctree }}
-        {% else %}
-            <div class="local-toc">{{ toc }}</div>
         {% endif %}
     {% endblock %}
 </nav>
