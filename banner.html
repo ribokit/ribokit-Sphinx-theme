@@ -2,9 +2,9 @@
   <div class="banner-inner">
     <span id="logo"><span class="octicon octicon-mark-github"></span></span>
 
-  {% if (next or prev) and 'index' not in pagename %}
-    {% if theme_repo %}
-    <a href="https://github.com/{{ theme_repo }}" class="button fork"><strong>View On GitHub</strong></a>
+  {% if (next or prev) and pagename != "index" %}
+    {% if theme_github_repo %}
+    <a href="https://github.com/{{ theme_github_repo }}" class="button fork"><strong>View On GitHub</strong></a>
     {% endif %}
 
     <div class="downloads">
@@ -15,7 +15,7 @@
         {% else %}
         <li><a href="index.html" class="button">&#x21E7;</a></li>
         {% endif %}
-        {% if prev %}
+        {% if prev and prev.link != "index.html" %}
         <li><a href="{{ prev.link|e }}" class="button">&#x21E6;</a></li>
         {% endif %}
         {% if next %}
@@ -24,13 +24,13 @@
       </ul>
     </div>
   {% else %}
-    {% if theme_repo %}
-    <a href="https://github.com/{{ theme_repo }}" class="button fork"><strong>View On GitHub</strong></a>
+    {% if theme_github_repo %}
+    <a href="https://github.com/{{ theme_github_repo }}" class="button fork"><strong>View On GitHub</strong></a>
     <div class="downloads">
       <span>Downloads</span>
       <ul>
-        <li><a href="https://github.com/{{ theme_repo }}/zipball/master" class="button">ZIP</a></li>
-        <li><a href="https://github.com/{{ theme_repo }}/tarball/master" class="button">TAR</a></li>
+        <li><a href="https://github.com/{{ theme_github_repo }}/zipball/master" class="button">ZIP</a></li>
+        <li><a href="https://github.com/{{ theme_github_repo }}/tarball/master" class="button">TAR</a></li>
       </ul>
     </div>
     {% endif %}
