@@ -73,18 +73,58 @@
     <div class="wrapper">
       {% include "navbar.html" %}
       <section>
-      {{ content }}
+      {% block body %}{% endblock %}
       </section>
     </div>
 
     <p class="wrapper">
+    {%- if show_sphinx %}
+      <small>Built with</small>
+      <a href="http://sphinx-doc.org/">Sphinx</a>
+      <small>using a</small>
       <a href="https://github.com/t47io/ribokit-Sphinx-theme">RiboKit Theme</a>
       <small>
         adapted from
         <a href="https://github.com/mattgraham/leapday">Leap Day</a> 
         , Hosted on
       </small> GitHub Pages
+    {%- endif %}
     </p>
+
+    <p class="wrapper">
+    {%- if show_copyright %}
+      <small>
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+      {%- endif %}
+      </small>
+    {%- endif %}
+    </p>
+
+    <p class="wrapper">
+    {%- if build_id and build_url %}
+      {% trans build_url=build_url, build_id=build_id %}
+        <small class="build">
+          Build
+          <a href="{{ build_url }}">{{ build_id }}</a>.
+        </small>
+      {% endtrans %}
+    {%- elif commit %}
+      {% trans commit=commit %}
+        <small class="commit">
+          Revision <code>{{ commit }}</code>.
+        </small>
+      {% endtrans %}
+    {%- elif last_updated %}
+      {% trans last_updated=last_updated|e %}
+      <small>Last updated on</small> {{ last_updated }}.
+      {% endtrans %}
+    {%- endif %}
+    </p>
+
     {% include "footer.html" %}
+    {%- block footer %} {% endblock %}
   </body>
 </html>
