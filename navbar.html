@@ -1,0 +1,10 @@
+<nav>
+    {% block menu %}
+        {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
+        {% if toctree %}
+            {{ toctree }}
+        {% else %}
+            <div class="local-toc">{{ toc }}</div>
+        {% endif %}
+  {% endblock %}
+</nav>
