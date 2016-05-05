@@ -5,7 +5,18 @@
     {% if theme_github_repo %}
     <a href="https://github.com/{{ theme_github_repo }}" class="button fork"><strong>View On GitHub</strong></a>
     {% endif %}
+
     {% include "searchbox.html" %}
+
+    {% if theme_display_version %}
+      {%- set nav_version = version %}
+      {% if READTHEDOCS and current_version %}
+        {%- set nav_version = current_version %}
+      {% endif %}
+      {% if nav_version %}
+        <div class="version"><span>{{ nav_version }}</span></div>
+      {% endif %}
+    {% endif %}
 
     {% if (next or prev) and pagename != "index" %}
     <div class="downloads">
