@@ -4,7 +4,7 @@
 
 Inspired by the `2.0` version used by _GitHub Pages_, this theme is retrofitted from [**mattgraham/leapday**](https://github.com/mattgraham/leapday), used by https://ribokit.github.io and https://t47io.github.io.
 
-### Installation
+## Installation
 
 Please follow the following steps:
 
@@ -38,7 +38,7 @@ html_theme_options = {
 
 > When testing, call `make clean && make html` instead, to exclude file removal.
 
-### Production
+## Production
 
 * Run `sphinx_make.sh`.
 
@@ -69,7 +69,7 @@ html_theme_options = {
 
 * Push the changes to GitHub. The website should be updated automatically (may be with some delay _[< 30s]_).
 
-### Documentation
+## Documentation
 
 Varibles available in the [**Front Matter**](https://jekyllrb.com/docs/frontmatter/) block are described in detail below (or see at https://ribokit.github.io/std/sphinx/#theme):
 
@@ -84,7 +84,7 @@ There are several options that are passed from `conf.py` into _Sphinx_ when maki
 | `display_version` | Boolean flag for whether to display current package version next to search box; default is `true`. |
 | `ribokit_flag` | Flag for testing or RiboKit deployment; default is `false`. When testing the docs locally, use `false`; when generating **.html** files for RiboKit site, use `true`. This toggles the _CSS_ and _JS_ static asset path only. |
 
-### Credits
+## Credits
 
 Created by [**t47**](http://t47.io/), *May 2016*.
 

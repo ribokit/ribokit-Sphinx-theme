@@ -21,13 +21,8 @@
       <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
     {% endif %}
 
-    {% if theme_ribokit_flag %}
-      <link rel="stylesheet" href="/assets/css/sphinx-styles.css" type="text/css" />
-      <link rel="stylesheet" href="/assets/css/github-dark.css" type="text/css" />
-    {% else %}
-      <link rel="stylesheet" href="{{ pathto('_static/css/styles.css', 1) }}" type="text/css" />
-      <link rel="stylesheet" href="{{ pathto('_static/css/github-dark.css', 1) }}" type="text/css" />
-    {% endif %}
+    <link rel="stylesheet" href="{{ pathto('_static/css/styles.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/css/github-dark.css', 1) }}" type="text/css" />
 
     {% if not embedded %}
       {% if use_opensearch %}
@@ -154,13 +149,8 @@
       {%- endfor %}
     {% endif %}
 
-    {% if theme_ribokit_flag %}
-      <script type="text/javascript" src="/assets/js/sphinx-main.js"></script>
-      <script type="text/javascript" src="/assets/js/sphinx-theme.js"></script>
-    {% else %}
-      <script type="text/javascript" src="{{ pathto('_static/js/main.js', 1) }}"></script>
-      <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
-    {% endif %}
+    <script type="text/javascript" src="{{ pathto('_static/js/main.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
 
     {% if 'search' in pagename %}
       <script type="text/javascript">
