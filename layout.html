@@ -162,6 +162,12 @@
       <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
     {% endif %}
 
+    {% if 'search' in pagename %}
+      <script type="text/javascript">
+        setTimeout(sectionHeight, 5000);
+      </script>
+    {% endif %}
+
     {%- block footer %} {% endblock %}
   </body>
 </html>

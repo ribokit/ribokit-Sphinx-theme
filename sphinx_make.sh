@@ -1,7 +1,7 @@
 make clean
 make html
 
-cd _build/html/_static/
+cd build/html/_static/
 rm basic.css pygments.css
 rm jquery*.js underscore*.js
 rm -rf css/ fonts/ images/ js/
