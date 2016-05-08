@@ -15,7 +15,7 @@ cd ../../../../
 # switch to gh-pages
 git checkout gh-pages
 git pull
-cp -r docs/build/html/ ./
+cp -r docs/build/html/* ./
 git add -A
 git commit -m "$(date)"
 git push
