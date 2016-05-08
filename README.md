@@ -35,8 +35,10 @@ html_theme_path = ['_theme']
 html_theme_options = {
     'description': 'PCR Assembly Primer Design',
     'author': author.split(',')[0].strip(),
-    'github_repo': 'DasLab/Primerize'
+    'github_repo': 'DasLab/Primerize',
+    'ga_tracker': 'UA-12345678-9'
 }
+html_additional_pages = {'404': '404.html'}
 ```
 
 * Copy the `sphinx_make.sh` from **Theme** repository into `docs/sphinx_make.sh`. This script is used for final submission to RiboKit website.
@@ -46,17 +48,7 @@ html_theme_options = {
 <hr/>
 ## Production
 
-* In `master` branch, run `sphinx_make.sh`.
-
-* Now copy and save the `build/html/` folder.
-
-* **Switch to `gh-pages` branch**.
-
-* Copy over the entire `build/html/` folder as root (see below).
-
-* Push the changes of `gh-pages` to GitHub. **The website should be updated automatically** (may be with some delay _[< 30s]_).
-
-* Switch back to `master` for everyday use.
+### First Time
 
 For first time setup, you also need to create a `.nojekyll` and `_config.yml` file:
 
@@ -74,6 +66,72 @@ include:
     - _modules
     - _templates
 ```
+
+<br/>
+
+### Submit
+
+Before submitting to RiboKit, make sure you check against **Doc Standards**. Once satisfactory:
+
+* **First `commit` and `push` all your changes to `master`!**
+
+* Run `docs/sphinx_make.sh` at root folder (`/`). 
+
+Here is a break-down for what it does:
+
+* In `master` branch, execute `make clean && make html`.
+
+* Remove unnecessary files in `build/html/_static/`.
+
+* **Switch to `gh-pages` branch**, i.e. `git checkout gh-pages`.
+
+* Copy over the entire `build/html/` folder as root (see below).
+
+* Push the changes of `gh-pages` to GitHub. **The website should be updated automatically** (may be with some delay _[< 30s]_).
+
+* Switch back to `master` for everyday use.
+
+> To take advantage of this automated script, you need to further edit your `.gitignore` file to exclude files from the other branch. For example, this is the `.gitignore` for `master` branch:
+
+```
+build/
+dist/
+docs/build
+docs/source/_theme
+
+primerize.egg-info/
+*.pyc
+
+/.nojekyll
+/*.html
+/*.js
+/objects.inv
+_static/
+_sources/
+_images/
+```
+
+And for `gh-pages`, its `.gitignore` is:
+
+```
+build/
+dist/
+docs/
+MATLAB/
+
+primerize/
+primerize.egg-info/
+setup.py
+requirements.txt
+```
+
+> The above setup saves you from the hassle of manually switch branches and keeping files. The `.gitignore` makes it easy that you do not lose any the ignored files, e.g. the `build/` and `dist/`. Otherwise, when you switch back to `master`, the previous built _Python_ packge is gone.
+
+> Some more readings: [this](https://gist.github.com/chrisjacob/833223) and [this](https://talk.jekyllrb.com/t/whats-the-best-way-to-update-github-pages/2100/3).
+
+<br/>
+
+### Double Check
 
 **After `make html`, your `master` should like like this**:
 
@@ -129,6 +187,7 @@ There are several options that are passed from `conf.py` into _Sphinx_ when maki
 | `description` | The subtitle for display. For acronyms, mark the initials with `<u>` for highlighting (on hover). |
 | `author` | The creator of the page. It will be displayed in the footer. |
 | `github_repo` | The repository name in format of `organization/repository`. This powers the "View on GitHub" and "Download" buttons. |
+| `ga_tracker` | Google Analytics tracker ID. |
 | `collapse_navigation` | Boolean flag for whether the `<ul>` of sidebar are expanded; default is `true`. |
 | `display_version` | Boolean flag for whether to display current package version next to search box; default is `true`. |
 
