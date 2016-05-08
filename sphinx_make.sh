@@ -1,3 +1,5 @@
+# start at /
+cd docs
 make clean
 make html
 
@@ -8,4 +10,15 @@ rm ajax-loader.gif comment-bright.png comment-close.png comment.png down-pressed
 # rm -rf css/ fonts/ images/ js/
 # rm ribokit.gif
 
-cd ../../..
+cd ../../../../
+
+# switch to gh-pages
+git checkout gh-pages
+git pull
+cp -r docs/build/html/ ./
+git add -A
+git commit -m "$(date)"
+git push
+
+# switch to master
+git checkout master
