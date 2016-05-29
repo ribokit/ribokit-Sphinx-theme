@@ -19,6 +19,9 @@
 
     {% if favicon %}
       <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {% else %}
+      <link rel="shortcut icon" type="image/gif" href="{{ pathto('_static/ribokit_icon.png', 1) }}" />
+      <link rel="icon" type="image/gif" href="{{ pathto('_static/ribokit_icon.png', 1) }}" />
     {% endif %}
 
     <link rel="stylesheet" href="{{ pathto('_static/css/styles.css', 1) }}" type="text/css" />
