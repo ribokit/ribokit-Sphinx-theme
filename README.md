@@ -2,7 +2,7 @@
 
 <img src="https://github.com/t47io/ribokit-Jekyll-theme/blob/master/thumbnail.png" alt="Leap Day" align="right">
 
-Inspired by the `2.0` version used by _GitHub Pages_, this theme is evolved from [**mattgraham/leapday**](https://github.com/mattgraham/leapday), used by https://ribokit.github.io and https://t47io.github.io.
+Inspired by the `2.0` version used by _GitHub Pages_, this theme is evolved from [**mattgraham/leapday**](https://github.com/mattgraham/leapday), used by https://ribokit.github.io.
 
 ## Installation
 
