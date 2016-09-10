@@ -97,9 +97,9 @@
     <p class="wrapper">
     {%- if show_sphinx %}
       <small>Built with</small>
-      <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a>
+      <a href="http://sphinx-doc.org/" target="_blank" rel="noopener noreferrer external">Sphinx</a>
       <small>using a</small>
-      <a href="https://github.com/t47io/ribokit-Sphinx-theme" target="_blank">RiboKit Theme</a>
+      <a href="https://github.com/t47io/ribokit-Sphinx-theme" target="_blank" rel="noopener noreferrer external">RiboKit Theme</a>
       <small>. Hosted on</small> GitHub Pages.
     {%- endif %}
     </p>
@@ -108,7 +108,7 @@
     {%- if show_copyright %}
       <small>
       {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}" rel="license">Copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
         {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
       {%- endif %}

@@ -8,7 +8,7 @@ var sectionHeight = function() {
   } else {
     $section.css('height','auto');
   }
-}
+};
 
 $(window).resize(sectionHeight);
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
     $("html, body").animate({scrollTop: position}, 400);
     $("nav ul li a").parent().removeClass("active");
     $(this).parent().addClass("active");
-    event.preventDefault(); 
+    event.preventDefault();
   });
 
   $("dl.method > dt").each(function() {
@@ -57,7 +57,7 @@ fixScale = function(doc) {
 
   if ((meta = meta[meta.length - 1]) && addEvent in doc) {
     fix();
-    scales = [.25, 1.6];
+    scales = [0.25, 1.6];
     doc[addEvent](type, fix, true);
   }
 
