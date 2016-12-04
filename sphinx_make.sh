@@ -1,4 +1,5 @@
 # start at /
+# e.g. run as docs/sphinx_make.sh
 cd docs
 make clean
 make html
