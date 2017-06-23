@@ -1,6 +1,6 @@
 # RiboKit Theme for Sphinx
 
-<img src="https://github.com/t47io/ribokit-Jekyll-theme/blob/master/thumbnail.png" alt="Leap Day" align="right">
+<img src="https://github.com/ribokit/ribokit-Jekyll-theme/blob/master/thumbnail.png" alt="Leap Day" align="right">
 
 Inspired by the `2.0` version used by _GitHub Pages_, this theme is evolved from [**mattgraham/leapday**](https://github.com/mattgraham/leapday), used by https://ribokit.github.io.
 
@@ -8,7 +8,7 @@ Inspired by the `2.0` version used by _GitHub Pages_, this theme is evolved from
 
 Please follow the following steps:
 
-* Clone or download the [**RiboKit Theme**](https://github.com/t47io/ribokit-Sphinx-theme) and place under your project directory. Create a `_theme/` folder:
+* Clone or download the [**RiboKit Theme**](https://github.com/ribokit/ribokit-Sphinx-theme) and place under your project directory. Create a `_theme/` folder:
 
 ```
 ├── PackageName/
@@ -35,7 +35,7 @@ html_theme_path = ['_theme']
 html_theme_options = {
     'description': 'PCR Assembly Primer Design',
     'author': author.split(',')[0].strip(),
-    'github_repo': 'DasLab/Primerize',
+    'github_repo': 'ribokit/Primerize',
     'ga_tracker': 'UA-12345678-9'
 }
 html_additional_pages = {'404': '404.html'}
@@ -194,6 +194,6 @@ There are several options that are passed from `conf.py` into _Sphinx_ when maki
 <hr/>
 ## Credits
 
-Created by [**t47**](http://t47.io/), *May 2016*.
+Created by [**t47**](https://t47.io/), *May 2016*.
 
 Creative Commons Attributes: [**CC BY 3.0**](http://creativecommons.org/licenses/by/3.0/)
