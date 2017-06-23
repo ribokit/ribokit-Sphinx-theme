@@ -3,7 +3,7 @@
     <span id="logo"><span class="octicon octicon-mark-github"></span></span>
 
     {% if theme_github_repo %}
-      <a href="https://github.com/{{ theme_github_repo }}" target="_blank" rel="noopener noreferrer external" class="button fork"><strong>View On GitHub</strong></a>
+      <a href="https://github.com/{{ theme_github_repo }}" target="_blank" class="button fork"><strong>View On GitHub</strong></a>
     {% endif %}
 
     {% include "searchbox.html" %}
@@ -28,10 +28,10 @@
             <li><a href="index.html" class="button">&#x21E7;</a></li>
           {% endif %}
           {% if prev and prev.link != "index.html" %}
-            <li><a href="{{ prev.link|e }}" class="button" rel="prev">&#x21E6;</a></li>
+            <li><a href="{{ prev.link|e }}" class="button">&#x21E6;</a></li>
           {% endif %}
           {% if next %}
-            <li><a href="{{ next.link|e }}" class="button" rel="next">&#x21E8;</a></li>
+            <li><a href="{{ next.link|e }}" class="button">&#x21E8;</a></li>
           {% endif %}
         </ul>
       </div>
@@ -40,8 +40,8 @@
       <div class="downloads">
         <span>Downloads</span>
         <ul>
-          <li><a href="https://github.com/{{ theme_github_repo }}/zipball/master" target="_blank" rel="noopener noreferrer external" class="button">ZIP</a></li>
-          <li><a href="https://github.com/{{ theme_github_repo }}/tarball/master" target="_blank" rel="noopener noreferrer external" class="button">TAR</a></li>
+          <li><a href="https://github.com/{{ theme_github_repo }}/zipball/master" target="_blank" class="button">ZIP</a></li>
+          <li><a href="https://github.com/{{ theme_github_repo }}/tarball/master" target="_blank" class="button">TAR</a></li>
         </ul>
       </div>
     {% endif %}

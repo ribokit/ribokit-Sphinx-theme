@@ -8,12 +8,12 @@
 {%- endif %}
 
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     {% block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }} | RiboKit</title>
     {% endblock %}
@@ -43,34 +43,34 @@
 
     {%- block linktags %}
       {%- if hasdoc('about') %}
-          <link rel="author" title="{{ _('About these documents') }}"
-                href="{{ pathto('about') }}"/>
+          <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
       {%- endif %}
       {%- if hasdoc('genindex') %}
-          <link rel="index" title="{{ _('Index') }}"
-                href="{{ pathto('genindex') }}"/>
+          <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
       {%- endif %}
       {%- if hasdoc('search') %}
-          <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}"/>
+          <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
       {%- endif %}
       {%- if hasdoc('copyright') %}
-          <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}"/>
+          <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
       {%- endif %}
-      <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}"/>
+      <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}" />
       {%- if parents %}
-          <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}"/>
+          <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}" />
       {%- endif %}
       {%- if next %}
-          <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}"/>
+          <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
       {%- endif %}
       {%- if prev %}
-          <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}"/>
+          <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
       {%- endif %}
     {%- endblock %}
     {%- block extrahead %} {% endblock %}
 
     <script type="text/javascript">
-      if (window.location.protocol.indexOf('https') == -1 && window.location.hostname.indexOf('.github.io') != -1) { window.location.href = window.location.href.replace('http:', 'https:'); }
+      if (window.location.protocol.indexOf('https') == -1 && window.location.hostname.indexOf('.github.io') != -1) {
+        window.location.href = window.location.href.replace('http:', 'https:');
+      }
     </script>
     <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -97,9 +97,9 @@
     <p class="wrapper">
     {%- if show_sphinx %}
       <small>Built with</small>
-      <a href="http://sphinx-doc.org/" target="_blank" rel="noopener noreferrer external">Sphinx</a>
+      <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a>
       <small>using a</small>
-      <a href="https://github.com/t47io/ribokit-Sphinx-theme" target="_blank" rel="noopener noreferrer external">RiboKit Theme</a>
+      <a href="https://github.com/ribokit/ribokit-Sphinx-theme" target="_blank">RiboKit Theme</a>
       <small>. Hosted on</small> GitHub Pages.
     {%- endif %}
     </p>
@@ -108,7 +108,7 @@
     {%- if show_copyright %}
       <small>
       {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}" rel="license">Copyright</a> {{ copyright }}.{% endtrans %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
         {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
       {%- endif %}
@@ -139,7 +139,7 @@
 
     {% include "footer.html" %}
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     {% if not embedded %}
       <script type="text/javascript">
