@@ -45,7 +45,6 @@ html_additional_pages = {'404': '404.html'}
 
 > When testing, call `make clean && make html` instead, to exclude file removal.
 
-<hr/>
 ## Production
 
 ### First Time
@@ -66,8 +65,6 @@ include:
     - _modules
     - _templates
 ```
-
-<br/>
 
 ### Submit
 
@@ -129,7 +126,6 @@ requirements.txt
 
 > Some more readings: [this](https://gist.github.com/chrisjacob/833223) and [this](https://talk.jekyllrb.com/t/whats-the-best-way-to-update-github-pages/2100/3).
 
-<br/>
 
 ### Double Check
 
@@ -177,7 +173,6 @@ requirements.txt
 
 ```
 
-<hr/>
 ## Documentation
 
 There are several options that are passed from `conf.py` into _Sphinx_ when making **.html**. Their default values are defined in `source/_theme/ribokit-Sphinx-theme/theme.conf`:
@@ -191,7 +186,6 @@ There are several options that are passed from `conf.py` into _Sphinx_ when maki
 | `collapse_navigation` | Boolean flag for whether the `<ul>` of sidebar are expanded; default is `true`. |
 | `display_version` | Boolean flag for whether to display current package version next to search box; default is `true`. |
 
-<hr/>
 ## Credits
 
 Created by [**t47**](https://t47.io/), *May 2016*.
