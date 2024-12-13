@@ -837,7 +837,7 @@ header a:hover {
   background: url(../images/octocat-logo.png);
 }
 
-section {
+.wrapper > section {
   width: 770px;
   padding: 30px 30px 50px 30px;
   margin: 20px 0;
@@ -942,7 +942,7 @@ footer {
     margin-right: -220px;
   }
 
-  section {
+  .wrapper > section {
     border: 1px solid #e5e5e5;
     border-width: 1px 0;
     padding: 20px auto;
@@ -999,7 +999,7 @@ footer {
     position: inherit;
   }
 
-  section {
+  .wrapper > section {
     margin-top: 130px;
     margin-bottom: 0px;
     width: auto;
